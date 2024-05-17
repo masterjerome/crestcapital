@@ -41,8 +41,8 @@ const SideBar = () => {
         ))}
       </div>
       <div className="flex flex-col gap-3 mt-5">
-        <Button text="Log in" href="/" mode={2} />
-        <Button text="Open Your Account" href="/" />
+        <Button text="Log in" href="/login" mode={2} onClick={toggleNav} />
+        <Button text="Open Your Account" href="/create" onClick={toggleNav} />
       </div>
     </aside>
   );
