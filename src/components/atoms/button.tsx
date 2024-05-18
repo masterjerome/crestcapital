@@ -15,31 +15,34 @@ const Button = ({
 }) => {
   if (mode === 1) {
     return (
-      <button
+      <Link
+        href={href}
         onClick={onClick}
-        className={`px-6 py-3 rounded-3xl ${cln}  bg-primary-light text-white hover:text-primary hover:bg-white border-primary border transition-all`}
+        className={`px-6 py-3 rounded-3xl ${cln} duration-300 bg-primary-light text-center text-white hover:text-primary hover:bg-white border-primary border transition-all`}
       >
-        <Link href={href}>{text}</Link>
-      </button>
+        {text}
+      </Link>
     );
   }
   if (mode === 2) {
     return (
-      <button
+      <Link
+        href={href}
         onClick={onClick}
-        className={`px-8 py-3 rounded-3xl ${cln} bg-primary-light text-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all`}
+        className={`px-8 py-3 rounded-3xl ${cln} duration-300 bg-primary-light text-center text-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all`}
       >
-        <Link href={href}>{text}</Link>
-      </button>
+        {text}
+      </Link>
     );
   }
   return (
-    <button
+    <Link
+      href={href}
       onClick={onClick}
-      className={`px-6 py-3 rounded-3xl ${cln} bg-primary text-white hover:text-primary hover:bg-white border-primary border transition-all`}
+      className={`px-6 py-3 rounded-3xl ${cln} duration-300 bg-primary text-white text-center hover:text-primary hover:bg-white border-primary border transition-all`}
     >
-      <Link href={href}>{text}</Link>
-    </button>
+      {text}
+    </Link>
   );
 };
 

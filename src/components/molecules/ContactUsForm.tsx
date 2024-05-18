@@ -153,7 +153,7 @@ const ContactUsForm = () => {
         type="submit"
         onClick={handleSubmit}
         disabled={isSubmitting}
-        className="mt-3 flex items-center justify-center bg-primary py-2 font-medium text-base hover:text-primary hover:bg-white border-primary border transition-all rounded-3xl"
+        className="mt-3 flex items-center justify-center duration-300 bg-primary py-2 font-medium text-base hover:text-primary hover:bg-white border-primary border transition-all rounded-3xl"
       >
         {isSubmitting ? (
           <Spin />

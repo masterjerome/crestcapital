@@ -2,7 +2,11 @@ import React from "react";
 import ContactUsForm from "../molecules/ContactUsForm";
 import MiniContact from "../molecules/miniContact";
 
-const ContactUsSection = ({title = "We are happy to discuss your portfolio & answer any question"}:{title?:string}) => {
+const ContactUsSection = ({
+  title = "We are happy to discuss your portfolio & answer any question",
+}: {
+  title?: string;
+}) => {
   return (
     <section className="flex flex-col gap-5 items-center p-6 md:p-20 lg:p-36 text-white">
       <h4 className="text-primary md:text-lg">Send us an Email Today</h4>
@@ -16,7 +20,7 @@ const ContactUsSection = ({title = "We are happy to discuss your portfolio & ans
             <MiniContact
               icon="/icons/location.svg"
               title="Address:"
-              subtitle="Rochester, New York 14618"
+              subtitle="East Thames Plaza,Ripple Rd, Dagenham RM9 6UQ, United Kingdom"
             />
             <MiniContact
               icon="/icons/call.svg"
@@ -31,7 +35,7 @@ const ContactUsSection = ({title = "We are happy to discuss your portfolio & ans
             <MiniContact
               icon="/icons/sendmail.svg"
               title="Email:"
-              subtitle="admin@advantawealthinvest.biz"
+              subtitle="Crestcapital@info.google.com"
             />
           </div>
         </div>
