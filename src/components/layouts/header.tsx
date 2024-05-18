@@ -23,7 +23,7 @@ export const links = [
 ];
 
 const Header = () => {
-  const { toggleNav } = useContext(AppContext);
+  const { navOpen, toggleNav } = useContext(AppContext);
   const pathname = usePathname();
   return (
     <header
@@ -56,7 +56,7 @@ const Header = () => {
         <Button text="Open Your Account" href="/create" />
       </div>
       <svg
-        className="lg:hidden cursor-pointer active:scale-90 transition-all"
+        className={`lg:hidden cursor-pointer transition-all duration-300 ${navOpen ? "scale-[0.3]" : "active:scale-90"}`}
         onClick={toggleNav}
         xmlns="http://www.w3.org/2000/svg"
         width="28"
