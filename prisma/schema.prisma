@@ -1,0 +1,112 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+//Schemas
+model User {
+  id                          String        @id @default(auto()) @map("_id") @db.ObjectId
+  firstName                   String
+  lastName                    String
+  email                       String        @unique
+  isEmailVerified             Boolean       @default(false)
+  isVerified                  Boolean       @default(false)
+  isSuspended                 Boolean       @default(false)
+  hashedPassword              String
+  dateOfBirth                 String
+  profileImgSrc               String
+  country                     String
+  city                        String
+  state                       String
+  address                     String
+  mobileNumber                String
+  idType                      String
+  idNumber                    String
+  dateOfExpiry                String
+  idCardFrontImgSrc           String
+  idCardBackImgSrc            String
+  accountNumber               String        @unique
+  transactions                Transaction[]
+  currency                    String?       @default("$")
+  atmRequest                  Boolean       @default(false)
+  transactionPin              String?
+  hasTransactionPin           Boolean       @default(false)
+  changeTransactionPinRequest Boolean       @default(false)
+  createdAt                   DateTime      @default(now())
+  updatedAt                   DateTime      @updatedAt
+}
+
+model Admin {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  email          String    @unique
+  hashedPassword String
+  role           AdminRole @default(admin)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model Transaction {
+  id                String             @id @default(auto()) @map("_id") @db.ObjectId
+  type              TransactionType
+  amount            Float
+  targetAccount     String?
+  targetName        String?
+  targetBankName    String?
+  swiftCode         String?
+  routingNumber     String?
+  bankAddress       String?
+  iban              String?
+  isSaveBox         Boolean            @default(false)
+  saveBoxAmount     Float?
+  description       String?
+  doneByAdmin       Boolean            @default(false)
+  adminEmail        String?
+  transferFee       Float?
+  isActive          Boolean            @default(true)
+  status            TransactionStatus? @default(pending)
+  userId            String             @db.ObjectId
+  user              User               @relation(fields: [userId], references: [id])
+  customCreatedTime String?
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+}
+
+model Contact {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String?
+  subject   String?
+  message   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Utility {
+  id              String  @id @default(auto()) @map("_id") @db.ObjectId
+  currentCurrency String? @default("€")
+}
+
+//Enums
+enum AdminRole {
+  admin
+  super_admin
+}
+
+enum TransactionType {
+  Deposit
+  Withdrawal
+  Target_Saving
+  Capital_Wealth
+  Utility_Bill
+  Domestic_Wire_Transfer
+  International_Wire_Transfer
+}
+
+enum TransactionStatus {
+  pending
+  successfull
+  failed
+}
