@@ -17,7 +17,7 @@ export default function VerifyTemplate({ userName }: EmailProps) {
             <img
               style={image}
               src="https://res.cloudinary.com/dpmx02shl/image/upload/v1711625589/keystoneNationalBank/logoOrange_krrbia.png"
-              alt="Keystone National Bank Logo"
+              alt="Prime Peak Bank Logo"
             />
           </Container>
           <Text style={bold}>Dear {userName}!</Text>
@@ -34,7 +34,7 @@ export default function VerifyTemplate({ userName }: EmailProps) {
             Please reply to this message if you have any other questions.
           </Text>
           <Container style={footer}>
-            <Text>Processed by Keystone National Bank for {userName}</Text>
+            <Text>Processed by Prime Peak Bank for {userName}</Text>
           </Container>
         </Container>
       </Section>

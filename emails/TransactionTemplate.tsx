@@ -29,7 +29,7 @@ export default function TransactionTemplate({
             <img
               style={image}
               src="https://res.cloudinary.com/dpmx02shl/image/upload/v1711625589/keystoneNationalBank/logoOrange_krrbia.png"
-              alt="Keystone National Bank Logo"
+              alt="Prime Peak Bank Logo"
             />
           </Container>
           <Text style={bold}>Hi {userName}!</Text>
@@ -60,7 +60,7 @@ export default function TransactionTemplate({
             future banking needs.
           </Text>
           <Container style={footer}>
-            <Text>&copy; Keystone National Bank 2024</Text>
+            <Text>&copy; Prime Peak Bank 2024</Text>
           </Container>
         </Container>
       </Section>

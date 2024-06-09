@@ -17,12 +17,12 @@ export default function RevokeTemplate({ userName }: EmailProps) {
             <img
               style={image}
               src="https://res.cloudinary.com/dpmx02shl/image/upload/v1711625589/keystoneNationalBank/logoOrange_krrbia.png"
-              alt="Keystone National Bank Logo"
+              alt="Prime Peak Bank Logo"
             />
           </Container>
           <Text style={bold}>Dear {userName}!</Text>
           <Text style={paragraph}>
-            This message is to notify you that Keystone National Bank has revoked
+            This message is to notify you that Prime Peak Bank has revoked
             the verified status on your account.
           </Text>
           <Text style={paragraph}>
@@ -37,7 +37,7 @@ export default function RevokeTemplate({ userName }: EmailProps) {
             accordingly. This process can take 5-7 business days.
           </Text>
           <Container style={footer}>
-            <Text>Processed by Keystone National Bank for {userName}</Text>
+            <Text>Processed by Prime Peak Bank for {userName}</Text>
           </Container>
         </Container>
       </Section>

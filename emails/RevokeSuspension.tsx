@@ -18,7 +18,7 @@ export default function RevokeSuspensionTemplate({ userName, accountNumber }: Em
             <img
               style={image}
               src="https://res.cloudinary.com/dpmx02shl/image/upload/v1711625589/keystoneNationalBank/logoOrange_krrbia.png"
-              alt="Keystone National Bank Logo"
+              alt="Prime Peak Bank Logo"
             />
           </Container>
           <Text style={bold}>Dear {userName}!</Text>
@@ -44,7 +44,7 @@ export default function RevokeSuspensionTemplate({ userName, accountNumber }: Em
           </Text>
           <Container style={footer}>
             <Text>
-              Processed by Keystone National Bank Fraud Investigation Team for{" "}
+              Processed by Prime Peak Bank Fraud Investigation Team for{" "}
               {userName}
             </Text>
           </Container>

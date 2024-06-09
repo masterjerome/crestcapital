@@ -18,11 +18,11 @@ export default function WelcomeTemplate({
       <Section style={main}>
         <Container style={container}>
           <Container>
-            <img style={image} src="https://res.cloudinary.com/dpmx02shl/image/upload/v1711625589/keystoneNationalBank/logoOrange_krrbia.png" alt="Keystone National Bank Logo" />
+            <img style={image} src="https://res.cloudinary.com/dpmx02shl/image/upload/v1711625589/keystoneNationalBank/logoOrange_krrbia.png" alt="Prime Peak Bank Logo" />
           </Container>
           <Text style={bold}>Hi {userName}!</Text>
           <Text style={paragraph}>
-            Here is the code you need to verify your Keystone National Bank Email
+            Here is the code you need to verify your Prime Peak Bank Email
             account:
           </Text>
           <Text style={verification}>{verificationCode}</Text>
@@ -38,7 +38,7 @@ export default function WelcomeTemplate({
             verification notice and accept our apologies for any inconvenience.
           </Text>
           <Container style={footer}>
-            <Text>Processed by Keystone National Bank for {userName}</Text>
+            <Text>Processed by Prime Peak Bank for {userName}</Text>
           </Container>
         </Container>
       </Section>
