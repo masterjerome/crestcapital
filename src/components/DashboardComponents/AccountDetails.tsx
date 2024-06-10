@@ -15,7 +15,7 @@ const AccountDetails = ({currentCurrency}: any) => {
     setShowBalance((prev) => !prev);
   };
   return (
-    <main className="h-52 bg-[#191C2E] rounded-xl px-3 md:px-4 xl:px-6 py-6">
+    <main className="h-52 bg-secondary rounded-xl px-3 md:px-4 xl:px-6 py-6">
       <p className="text-[#E8E9EB] text-[0.6rem] md:text-xs">Current balance</p>
       <div className="flex justify-between items-center">
         <p className="text-2xl md:text-3xl xl:text-[32px] text-[#E39F7E] font-semibold">

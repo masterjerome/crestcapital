@@ -97,7 +97,7 @@ body{
 
  /* For the Sidebar layout */
 .mainWidth {
-  width: calc(100% - 20rem);
+  width: calc(100% - 17rem);
   float: right;
 }
 @media screen and (max-width: 1023px) {

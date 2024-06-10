@@ -18,7 +18,7 @@ const config: Config = {
         "tertiary-sub": "#737373",
         basic: "#2727276B",
         sidebarHover: "#D56F3E",
-        sidebar: "#592F1A",
+        sidebar: "#151212", //592F1A
         sidebarText: "#0A0B12",
         textWhite: "#F2F2F7",
         textPrimary: "#161618",
