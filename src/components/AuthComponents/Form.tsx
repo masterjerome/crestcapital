@@ -17,24 +17,20 @@ import Toast from "../molecules/Toast";
 import { errorModalProps, successModalProps } from "@/lib/modalPropsMessages";
 
 //Import Needed Images
-import arrow from "../../../public/images/arrowRight.svg"
+import arrow from "../../../public/images/arrowRight.svg";
 
 //Import Needed ICons
 import { BsEye } from "react-icons/bs";
 import { BsEyeSlash } from "react-icons/bs";
 
-
 //Import Needed States
 import { useCreateUserStore } from "@/store/accountCreation";
 
-
-
-
 const Form = () => {
   //State for the modals
-  const [showModal, setShowModal] = useState<boolean>(false)
-  const [modalProps, setModalProps] = useState<object>({})
-  const [message, setMessage] = useState<string>("")
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [modalProps, setModalProps] = useState<object>({});
+  const [message, setMessage] = useState<string>("");
   //For the router
   const router = useRouter();
   const {
@@ -71,7 +67,7 @@ const Form = () => {
   } = useCreateUserStore();
 
   //For the loading state
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false);
   //For the password
   const [seen, setSeen] = useState<boolean>(false);
   //Divs state
@@ -112,51 +108,74 @@ const Form = () => {
     return false;
   };
 
-//Display the correct modal function
-const handleSuccess = () => {
-  setShowModal(true);
-  setModalProps(successModalProps);
-};
+  //Display the correct modal function
+  const handleSuccess = () => {
+    setShowModal(true);
+    setModalProps(successModalProps);
+  };
 
-const handleError = () => {
-  setShowModal(true);
-  setModalProps(errorModalProps);
-};
-const handleFinal = () => {
-  setShowModal(false)
-}
+  const handleError = () => {
+    setShowModal(true);
+    setModalProps(errorModalProps);
+  };
+  const handleFinal = () => {
+    setShowModal(false);
+  };
   //On submit function
   const onSubmit = (event: FormEvent) => {
-      event.preventDefault()
-      setLoading(true)
-      const accountNumber = generateAccountNumber().toString();
-      const transactions = {}
-      const formData = {accountNumber, firstName, lastName, email, password, dateOfBirth, profileImgSrc, country, city, state, address, mobileNumber, idType, transactions, idNumber, dateOfExpiry, idCardFrontImgSrc, idCardBackImgSrc}
+    event.preventDefault();
+    setLoading(true);
+    const accountNumber = generateAccountNumber().toString();
+    const transactions = {};
+    const formData = {
+      accountNumber,
+      firstName,
+      lastName,
+      email,
+      password,
+      dateOfBirth,
+      profileImgSrc,
+      country,
+      city,
+      state,
+      address,
+      mobileNumber,
+      idType,
+      transactions,
+      idNumber,
+      dateOfExpiry,
+      idCardFrontImgSrc,
+      idCardBackImgSrc,
+    };
 
-      makeApiRequest("/create", "post", formData, {
-        onSuccess: () => {
-          // Handle success
-          setLoading(false)
-          setMessage("Your account was created successfully")
-          handleSuccess()
-          router.push(`/onboarding/verification?email=${email}&name=${firstName} ${lastName}`);
-        },
-        onError: (error: any) => {
-          // Handle error
-          setLoading(false)
-          if (error.message === "Request failed with status code 409") {
-            setMessage("Email already exists, kindly log in.")
-            router.push("/login")
-          }
-          setMessage("Unable to create account currently. Please try again.")
-          handleError()
-          router.refresh() 
-        },
-      });
-  }
+    makeApiRequest("/create", "post", formData, {
+      onSuccess: () => {
+        // Handle success
+        setLoading(false);
+        setMessage("Your account was created successfully");
+        handleSuccess();
+        router.push(
+          `/onboarding/verification?email=${email}&name=${firstName} ${lastName}`
+        );
+      },
+      onError: (error: any) => {
+        // Handle error
+        setLoading(false);
+        if (error.message === "Request failed with status code 409") {
+          setMessage("Email already exists, kindly log in.");
+          router.push("/login");
+        }
+        setMessage("Unable to create account currently. Please try again.");
+        handleError();
+        router.refresh();
+      },
+    });
+  };
   return (
     <>
-      {showModal && <Toast {...modalProps} message= {message} hideModal={handleFinal}/>}
+      {showModal && (
+        <Toast {...modalProps} message={message} hideModal={handleFinal} />
+      )}
       <Progress activeDiv={activeDiv} />
       <main className="mt-10 text-xs md:text-sm xl:text-base text-[#161618]">
         <form onSubmit={onSubmit}>

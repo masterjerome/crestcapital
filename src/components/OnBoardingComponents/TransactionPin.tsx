@@ -7,45 +7,36 @@ import { toast } from "sonner";
 import { useSession } from "next-auth/react";
 
 //Import Needed Images
-import logo from "../../../public/Images/logo.svg";
-import arrow from "../../../public/Images/arrowRight.svg";
-
+import logo from "../../../public/images/logo.svg";
+import arrow from "../../../public/images/arrowRight.svg";
 
 const TransactionPin = () => {
-  const [pin, setPin] = useState<string>("")
-  const [userEmail, setUserEmail] = useState<string | any>("")
+  const [pin, setPin] = useState<string>("");
+  const [userEmail, setUserEmail] = useState<string | any>("");
   const router = useRouter();
   //For the loading state
   const [loading, setLoading] = useState<boolean>(false);
-  const { data: session, status } = useSession()
+  const { data: session, status } = useSession();
   //Get the email using search Params
   const searchParams = useSearchParams();
 
   useEffect(() => {
-
-    if (searchParams.has("email")){
-      
-      const gottenUserEmail = searchParams.get('email')
-      setUserEmail(gottenUserEmail)
-    
+    if (searchParams.has("email")) {
+      const gottenUserEmail = searchParams.get("email");
+      setUserEmail(gottenUserEmail);
     } else {
-  
       if (status === "authenticated") {
-        
-        setUserEmail(session?.user?.email)
-        
+        setUserEmail(session?.user?.email);
       }
-  
     }
-  
-  }, [searchParams, session?.user?.email, status])
+  }, [searchParams, session?.user?.email, status]);
 
   //OnSubmit Function
   const onSubmit = (event: FormEvent) => {
     event.preventDefault();
     setLoading(true);
 
-    const formData = { email: userEmail, transactionPin : pin };
+    const formData = { email: userEmail, transactionPin: pin };
 
     makeApiRequest("/addTransactionsPin", "post", formData, {
       onSuccess: () => {
@@ -66,7 +57,12 @@ const TransactionPin = () => {
   return (
     <main>
       <div className="flex gap-x-1">
-        <Image src={logo} alt="Prime Peak Capital Bank Logo" priority={true} className="size-9 sm:size-12 xl:size-14"/>
+        <Image
+          src={logo}
+          alt="Prime Peak Capital Bank Logo"
+          priority={true}
+          className="size-9 sm:size-12 xl:size-14"
+        />
         <div className="text-[#1C1F33] font-semibold text-xs sm:text-sm xl:text-base">
           <p>Prime Peak</p>
           <p className="-mt-[0.3rem]">Capital</p>
@@ -95,7 +91,9 @@ const TransactionPin = () => {
             className="border border-[#E6E7E8] px-2 xl:px-4 py-2 md:py-3 focus:border-primary rounded-md focus:outline-none"
             placeholder="XXXX"
             required
-            onChange={(e: ChangeEvent<HTMLInputElement>) => setPin(e.target.value)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              setPin(e.target.value)
+            }
           />
         </div>
 

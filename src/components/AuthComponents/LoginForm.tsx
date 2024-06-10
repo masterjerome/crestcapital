@@ -21,7 +21,7 @@ type InitialStateProps = {
 const initialState: InitialStateProps = {
   email: "",
   password: "",
-  role: "user"
+  role: "user",
 };
 
 const LoginForm = () => {
@@ -56,7 +56,6 @@ const LoginForm = () => {
         toast.success("Welcome");
         handleFormReset();
         router.push("/user/dashboard");
-        
       } else if (callback?.error) {
         setLoading(false);
         handleFormReset();
