@@ -11,7 +11,7 @@ import { BsEye } from "react-icons/bs";
 import { BsEyeSlash } from "react-icons/bs";
 
 //Import Needed Images
-import arrow from "../../../public/Images/arrowRight.svg";
+import arrow from "../../../public/images/arrowRight.svg";
 
 type InitialStateProps = {
   email: string;

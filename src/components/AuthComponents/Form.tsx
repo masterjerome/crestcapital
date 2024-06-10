@@ -17,7 +17,7 @@ import Toast from "../molecules/Toast";
 import { errorModalProps, successModalProps } from "@/lib/modalPropsMessages";
 
 //Import Needed Images
-import arrow from "../../../public/Images/arrowRight.svg";
+import arrow from "../../../public/images/arrowRight.svg"
 
 //Import Needed ICons
 import { BsEye } from "react-icons/bs";

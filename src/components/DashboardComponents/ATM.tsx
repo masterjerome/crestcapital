@@ -8,13 +8,13 @@ import { Add } from "iconsax-react";
 import ATMRequestForm from "./ATMRequestForm";
 
 //Import Needed Images
-import atmChip from "../../../public/Images/atmChip.svg";
-import visaLogo from "../../../public/Images/visaImg.svg";
-import asterik from "../../../public/Images/asteriks.svg";
-import two from "../../../public/Images/two.svg";
-import three from "../../../public/Images/three.svg";
-import four from "../../../public/Images/four.svg";
-import five from "../../../public/Images/five.svg";
+import atmChip from "../../../public/images/atmChip.svg";
+import visaLogo from "../../../public/images/visaImg.svg";
+import asterik from "../../../public/images/asteriks.svg";
+import two from "../../../public/images/two.svg";
+import three from "../../../public/images/three.svg";
+import four from "../../../public/images/four.svg";
+import five from "../../../public/images/five.svg";
 
 type atmProps = {
     hasRequested : boolean | any,
