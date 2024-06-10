@@ -44,7 +44,7 @@ const AccountSummary = ({accountNumber, firstName, lastName} : string | any) => 
             <div className="flex flex-col gap-y-3 mt-10">
                 <div className="flex flex-col gap-y-1">
                     <p className="text-[8px] md:text-[10px] xl:text-[12px] text-[#9EA0A3]">Account type</p>
-                    <p className="text-[10px] md:text-[12px] xl:text-[14px] text-[#06121B] font-medium">Keystone Savings</p>
+                    <p className="text-[10px] md:text-[12px] xl:text-[14px] text-[#06121B] font-medium">Prime Peak Savings</p>
                 </div>
                 <div className="flex flex-col gap-y-1">
                     <p className="text-[8px] md:text-[10px] xl:text-[12px] text-[#9EA0A3]">Account holder</p>

@@ -37,7 +37,7 @@ const page = async ({ params }: { params: { id: string } }) => {
         return "Target Savings";
         break;
     case "Capital_Wealth":
-        return "Keystone Wealth";
+        return "Prime Peak Wealth";
         break;
     case "Utility_Bill":
         return "Utility Bill";
