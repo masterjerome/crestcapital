@@ -16,7 +16,7 @@ import Downbar from "./Downbar";
 import { ArrowSwapHorizontal, Chart2, CloseCircle, Element3, I24Support, LogoutCurve, Profile, Profile2User, ProfileCircle, WalletMoney } from "iconsax-react";
 
 //Import Needed Images
-import logo from "../../public/Images/logoWhite.svg";
+import logo from "/public/logo.svg";
 
 const Sidebar = ({role} : {role : string | any}) => {
   //For the sidebar
@@ -27,7 +27,7 @@ const Sidebar = ({role} : {role : string | any}) => {
   };
   return (
     <main className="relative">
-      <div className="fixed left-0 top-0 z-50 hidden h-screen w-80 bg-sidebar lg:block rounded-r-[2.5rem]">
+      <div className="fixed left-0 top-0 z-50 hidden h-screen w-[278px] bg-sidebar lg:block">
                 <div className="flex gap-x-1 w-fit ml-8 mt-4">
                     <Image src={logo} alt="Prime Peak National Bank Logo" priority={true} className="size-8 md:size-10 xl:size-12"/>
                     <div className="text-textWhite  text-xs sm:text-sm xl:text-base -mt-1">
