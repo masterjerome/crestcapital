@@ -405,7 +405,7 @@ const handleFinal = () => {
             </p>
           </div>
           <p className="my-4">
-            Already using Keystone National bank?
+            Already using Prime Peak Capital bank?
             <span className="text-primary hover:underline duration-500">
               <Link href="/login"> Sign in here</Link>
             </span>

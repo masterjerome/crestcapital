@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 //Import Needed Images
-import logo from "../../public/Images/logo.svg";
+import logo from "../../public/logo.svg";
 
 const loading = () => {
   return (
