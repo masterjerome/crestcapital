@@ -35,7 +35,7 @@ const ContactUsSection = ({
             <MiniContact
               icon="/icons/sendmail.svg"
               title="Email:"
-              subtitle="Crestcapital@info.google.com"
+              subtitle="primepeak@info.google.com"
             />
           </div>
         </div>

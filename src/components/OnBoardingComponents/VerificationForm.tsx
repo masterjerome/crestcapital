@@ -68,7 +68,7 @@ const VerificationForm = () => {
       <div className="flex gap-x-1">
         <Image
           src={logo}
-          alt="Prime Peak Capital Bank Logo"
+          alt="Prime Peak Bank Logo"
           priority={true}
           className="size-9 sm:size-12 xl:size-14"
         />

@@ -107,7 +107,7 @@ const LoginForm = () => {
           </div>
         </div>
         <p className="mt-4">
-          First time using Prime Peak Capital Bank?
+          First time using Prime Peak Bank?
           <span className="text-primary hover:underline duration-500">
             <Link href="/create"> Sign up</Link>
           </span>
