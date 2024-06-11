@@ -424,7 +424,7 @@ const Form = () => {
             </p>
           </div>
           <p className="my-4">
-            Already using Prime Peak Capital bank?
+            Already using Prime Peak bank?
             <span className="text-primary hover:underline duration-500">
               <Link href="/login"> Sign in here</Link>
             </span>

@@ -32,7 +32,6 @@ const Sidebar = ({role} : {role : string | any}) => {
                     <Image src={logo} alt="Prime Peak National Bank Logo" priority={true} className="size-8 md:size-10 xl:size-12"/>
                     <div className="text-textWhite  text-xs sm:text-sm xl:text-base -mt-1">
                         <p>Prime Peak</p>
-                        <p className="-mt-2">Capital</p>
                         <p className="-mt-2">Bank</p>
                     </div>
                 </div>

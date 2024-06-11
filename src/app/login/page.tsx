@@ -16,7 +16,6 @@ const page = () => {
                     <Image src={logo} alt="Prime Peak National Bank Logo" priority={true} className="size-9 sm:size-12 xl:size-14"/>
                     <div className="text-[#1C1F33] font-semibold text-xs sm:text-sm xl:text-base">
                         <p>Prime Peak</p>
-                        <p className="-mt-[0.3rem]">Capital</p>
                         <p className="-mt-[0.3rem]">Bank</p>
                     </div>
                 </Link>

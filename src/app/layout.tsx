@@ -8,7 +8,7 @@ import { NextAuthProvider } from "@/providers/SessionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Prime Peak Capital",
+  title: "Prime Peak",
   description: "All-in-one banking for everyone",
 };
 

@@ -7,7 +7,7 @@ const WhyUs = () => {
     <section className="w-full">
       <div className="text-center flex flex-col gap-3">
         <h1 className="text-3xl md:text-5xl lg:text-6xl">
-          Why Prime Peak Capital Bank
+          Why Prime Peak Bank
         </h1>
         <p className="text-gray-300">
           Give your team the flexibility to connect with vetted freelancers,

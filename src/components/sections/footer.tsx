@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className="border-b border-b-tertiary pb-3">
           <h4 className="text-primary text-right mb-1">EMAIL US</h4>
-          <p className="text-[#FFFFFF99] text-right">Crestcapital@info.google.com</p>
+          <p className="text-[#FFFFFF99] text-right">primepeak@info.google.com</p>
         </div>
         <div className="border-b border-b-tertiary pb-3">
           <h4 className="text-primary text-right mb-1">CALL US</h4>
