@@ -28,7 +28,7 @@ const Sidebar = ({role} : {role : string | any}) => {
   return (
     <main className="relative">
       <div className="fixed left-0 top-0 z-50 hidden h-screen w-[278px] bg-sidebar lg:block">
-                <div className="flex gap-x-1 w-fit ml-8 mt-4">
+                <div className="flex gap-x-1 w-fit ml-8 mt-4 items-center">
                     <Image src={logo} alt="Prime Peak National Bank Logo" priority={true} className="size-8 md:size-10 xl:size-12"/>
                     <div className="text-textWhite  text-xs sm:text-sm xl:text-base -mt-1">
                         <p>Prime Peak</p>

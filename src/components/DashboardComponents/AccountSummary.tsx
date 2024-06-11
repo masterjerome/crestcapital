@@ -39,7 +39,7 @@ const AccountSummary = ({accountNumber, firstName, lastName} : string | any) => 
         <main className="hidden lg:block border border-[#7676801F] rounded-xl px-3 md:px-4 xl:px-6 py-6">
             <div className="flex gap-x-3 items-center">
                 <Image src={logo} alt="logo" className="size-9 sm:size-12 xl:size-14"/>
-                <p className="text-sm xl:text-base text-secondary font-semibold">Prime Peak Capital bank</p>
+                <p className="text-sm xl:text-base text-secondary font-semibold">Prime Peak bank</p>
             </div>
             <div className="flex flex-col gap-y-3 mt-10">
                 <div className="flex flex-col gap-y-1">
