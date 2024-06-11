@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   font-family: var(--font-inter);
 }
 .manrope {
@@ -14,88 +14,88 @@ body{
 
 /* Creating Account Background */
 .createBackground {
-    background-image: url("../../public/Images/signUpBackground.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../../public/images/signUpBackground.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Loading Styles for Users */
 .spinnerContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader {
+  color: #161618;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #d56f3e;
+  animation: cycle-words 5s infinite;
+}
+
+@keyframes cycle-words {
+  10% {
+    -webkit-transform: translateY(-105%);
+    transform: translateY(-105%);
   }
 
-  .loader {
-    color: #161618;
-    font-family: "Poppins",sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 40px;
-    padding: 10px 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    border-radius: 8px;
-  }
-  
-  .words {
-    overflow: hidden;
-  }
-  
-  .word {
-    display: block;
-    height: 100%;
-    padding-left: 6px;
-    color: #D56F3E;
-    animation: cycle-words 5s infinite;
-  }
-  
-  @keyframes cycle-words {
-    10% {
-      -webkit-transform: translateY(-105%);
-      transform: translateY(-105%);
-    }
-  
-    25% {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
-    }
-  
-    35% {
-      -webkit-transform: translateY(-205%);
-      transform: translateY(-205%);
-    }
-  
-    50% {
-      -webkit-transform: translateY(-200%);
-      transform: translateY(-200%);
-    }
-  
-    60% {
-      -webkit-transform: translateY(-305%);
-      transform: translateY(-305%);
-    }
-  
-    75% {
-      -webkit-transform: translateY(-300%);
-      transform: translateY(-300%);
-    }
-  
-    85% {
-      -webkit-transform: translateY(-405%);
-      transform: translateY(-405%);
-    }
-  
-    100% {
-      -webkit-transform: translateY(-400%);
-      transform: translateY(-400%);
-    }
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
   }
 
- /* For the Sidebar layout */
+  35% {
+    -webkit-transform: translateY(-205%);
+    transform: translateY(-205%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-305%);
+    transform: translateY(-305%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-405%);
+    transform: translateY(-405%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+/* For the Sidebar layout */
 .mainWidth {
   width: calc(100% - 17rem);
   float: right;
@@ -105,10 +105,10 @@ body{
     width: 100%;
   }
 }
-.downbarShadow{
-  box-shadow: -1px -2px 4px -1px rgba(0,0,0,0.3);
-  -webkit-box-shadow: -1px -2px 4px -1px rgba(0,0,0,0.3);
-  -moz-box-shadow: -1px -2px 4px -1px rgba(0,0,0,0.3);
+.downbarShadow {
+  box-shadow: -1px -2px 4px -1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -1px -2px 4px -1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -1px -2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
 /* Style the scrollbar */
@@ -117,7 +117,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #1C1F33;
+  background-color: #1c1f33;
   border-radius: 5px;
 }
 body::-webkit-scrollbar-thumb:hover {

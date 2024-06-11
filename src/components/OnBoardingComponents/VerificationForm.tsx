@@ -9,20 +9,18 @@ import { useOtpStore } from "@/store/verification";
 import { generateOTPNumber } from "@/utils/AccountInfo";
 import { useOnboardingStore } from "@/store/onboardingDetails";
 
-
 //Import Needed Components
 import Progress from "@/components/AuthComponents/Progress";
 import SendVerificationEmail from "../molecules/SendVerificationEmail";
 
 //Import Needed Images
-import logo from "../../../public/Images/logo.svg";
-import arrow from "../../../public/Images/arrowRight.svg";
+import logo from "../../../public/images/logo.svg";
+import arrow from "../../../public/images/arrowRight.svg";
 
 const VerificationForm = () => {
-
   //Zustand Email Management
-  const {email} = useOnboardingStore()
-  
+  const { email } = useOnboardingStore();
+
   //Zustand OTP Management
   const { otpNumber, updateOtpNumber } = useOtpStore();
 
@@ -68,7 +66,12 @@ const VerificationForm = () => {
   return (
     <main>
       <div className="flex gap-x-1">
-        <Image src={logo} alt="Prime Peak Capital Bank Logo" priority={true} className="size-9 sm:size-12 xl:size-14"/>
+        <Image
+          src={logo}
+          alt="Prime Peak Capital Bank Logo"
+          priority={true}
+          className="size-9 sm:size-12 xl:size-14"
+        />
         <div className="text-[#1C1F33] font-semibold text-xs sm:text-sm xl:text-base">
           <p>Prime Peak</p>
           <p className="-mt-[0.3rem]">Capital</p>
