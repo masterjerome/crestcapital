@@ -10,7 +10,7 @@ const page = () => {
   return (
     <main className="h-screen lg:flex">
       <div className="flex h-full flex-col px-6 sm:px-8 md:px-10 lg:w-2/3 lg:px-12 xl:px-14 2xl:px-16 overflow-y-scroll">
-        <Link href="/" className="flex gap-x-1 mt-4">
+        <Link href="/" className="flex gap-x-1 mt-4 items-center">
           <Image
             src={logo}
             alt="Prime Peak Bank Logo"

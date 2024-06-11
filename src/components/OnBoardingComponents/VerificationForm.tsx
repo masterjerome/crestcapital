@@ -65,7 +65,7 @@ const VerificationForm = () => {
 
   return (
     <main>
-      <div className="flex gap-x-1">
+      <div className="flex gap-x-1 items-center">
         <Image
           src={logo}
           alt="Prime Peak Bank Logo"
@@ -74,7 +74,6 @@ const VerificationForm = () => {
         />
         <div className="text-[#1C1F33] font-semibold text-xs sm:text-sm xl:text-base">
           <p>Prime Peak</p>
-          <p className="-mt-[0.3rem]">Capital</p>
           <p className="-mt-[0.3rem]">Bank</p>
         </div>
       </div>
