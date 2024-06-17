@@ -20,7 +20,7 @@ export default function SuspendTemplate({
           <Container>
             <img
               style={image}
-              src="https://res.cloudinary.com/dpmx02shl/image/upload/v1711625589/keystoneNationalBank/logoOrange_krrbia.png"
+              src="https://res.cloudinary.com/dpmx02shl/image/upload/v1718604174/primepeak/logo_ssfys9.png"
               alt="Prime Peak Bank Logo"
             />
           </Container>
